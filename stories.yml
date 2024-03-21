@@ -1,0 +1,63 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story:  book appointment
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_appointment
+  - action: utter_dept_info
+     
+- story: enquiry about tariff
+  steps:
+  - intent: enquire_tariff
+  - action: utter_tariff_info
+
+- story: get tariff info
+  steps:
+  - intent: get_tariff_info
+  - action: utter_respond_tariff
+
+- story: enquiry about staff
+  steps:
+  - intent: enquire_staff
+  - action: utter_staff_info
+
+- story: enquiry about units
+  steps: 
+  - intent: enquire_units
+  - action: utter_units_info
+
+- story: say goodbye
+  steps:
+  - intent: deny
+  - action: utter_goodbye
+

@@ -1,0 +1,134 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yup
+    - yes please
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no i dont want 
+    - no don't
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent : book_appointment
+  examples: |
+    - book an appointment
+    - schedule a doctor appointment
+    - I want to see a doctor
+
+- intent: enquire_tariff
+  examples: |
+    - What are the tariffs?
+    - Tell me about the charges
+    - How much does it cost?
+
+- intent: get_tariff_info
+  examples: |
+    - What are the hospital charges?
+    - Can you tell me about the pricing?
+    - How much does the hospital cost?
+
+- intent: enquire_staff
+  examples: |
+    - Who are the doctors?
+    - Tell me about the staff
+    - Is there any specialist available?
+
+- intent: enquire_units
+  examples: |
+    - What units do you have?
+    - Tell me about the facilities
+    - Which departments are there?
+
+- intent: search_provider
+  examples: |
+    - I need a [unit] of the hospital
+
+
+
+
+

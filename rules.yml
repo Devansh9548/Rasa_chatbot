@@ -1,0 +1,38 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say `hello` whenever the user sends a message with intent `greet`
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: say 'ask deparment' whenever the user sends a message with intent 'book_appointment'
+  steps:
+  - intent: book_appointment
+  - action: utter_dept_info
+  
+- rule: say 'list of doctor' whenver the user sends a message with intent 'enquire_staff'
+  steps:
+  - intent: enquire_staff
+  - action: utter_staff_info
+
+- rule: say 'tarrif staff' whenever the user sends a message with intent 'enquire_tariff'
+  steps:
+  - intent: enquire_tariff
+  - action: utter_tariff_info
+
+- rule: say 'tarrif info' whenever the user sends a message with intent 'get_tariff_info'
+  steps:
+  - intent: get_tariff_info
+  - action: utter_respond_tariff
