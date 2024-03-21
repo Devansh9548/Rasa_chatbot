@@ -1,0 +1,117 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - request_restaurant
+  - inform
+  - book_appointment
+  - enquire_tariff
+  - enquire_staff
+  - enquire_units
+  - get_tariff_info
+
+#slots:
+#  service_type:
+#    type: unfeaturized
+#  department:
+#    type: unfeaturized
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How can i assist you today"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Thank you for reaching out. Have a great day!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+     
+  utter_book_appointment:
+  - text: You have successfully booked your appointment.
+
+  utter_ask_department:
+  - text: "Sure, I can help you with that. Which department would you like to book an appointment for?"
+
+  utter_dept_info:
+  - text: "In which department do you want to book an appointment?
+    - cardiology
+    - Neurology
+    - Dental
+    - Psychiatry
+    - Gastroenterology
+    - Ophthalmology
+    - Orthodontics
+    - Urology
+    - Dermatology
+    - Oncology
+    - Anesthesia and Intensive Care Medicine
+    - Cardiac Surgery
+    - Emergency Medicine
+    - Clinical Genetics
+    - Medical Microbiology
+    - Nutritionist
+    - Pharmacists
+    - Radiologists
+    - Pathologist
+    - Family Practitioner
+    - General Practitioner
+    - Internal Medicine Specialist
+    - Obstetrics & Gynecology
+    - Endocrinology
+    - Rheumatology
+    - Hemodialysis
+    - Haemorrhage, Peritoneal or Tracheostomy Dial
+    - Blood Banking
+    - Lab Technician
+    - Laboratory Scientist"
+
+  
+  utter_tariff_info:
+  - text: "The tariff information can vary based on the department and services required. Please provide the department you are interested in."
+  
+  utter_staff_info:
+  - text: "We have a team of highly qualified doctors and specialists across different departments. How can I assist you further?"
+
+  utter_units_info:
+  - text: "Our hospital provides various units and departments, including Cardiology, Orthopedics, Neurology, and Pediatrics. How can I assist you further?"
+  
+  utter_respond_tariff:
+  - text: "The cost of [service_type] services in the [department] department can vary. For accurate pricing, it's best to contact our hospital directly."
+  
+  utter_tariff_surgery:
+  - text: "The cost of surgery can vary based on the specific procedure and other factors. For accurate pricing, it's best to contact our hospital directly."
+  
+  utter_tariff_cardiology:
+  - text: "The tariff for cardiology services is available upon request. You can inquire about the cost of specific procedures in the cardiology department by reaching out to us."
+actions :
+- utter_book_appointment
+- utter_ask_department
+- utter_tariff_info
+- utter_staff_info
+- utter_units_info
+- utter_dept_info
+- utter_respond_tariff
+- utter_tariff_surgery
+- utter_tariff_cardiology
+- action_custom_database
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
